@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/variaveis.css">
+    <link rel="stylesheet" href="./assets/css/inicio/style.css">
+    <link rel="stylesheet" href="./assets/css/inicio/resposividade.css">
+    <link rel="stylesheet" href="./assets/css/inicio/abaAjuda.css">
+    <link rel="stylesheet" href="./assets/css/inicio/forca.css">
+    <link rel="shortcut icon" href="./assets/src/logoIcone.png" type="image/x-icon">
+    <title>Partida de Forca</title>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="./assets/src/video espaço 2.mp4" type="video/mp4">
+    </video>
+    <header>
+    <div class="minhaLogo">
+        <a href="https://fabricio-p-viana.github.io/meuPortifolio/"><img src="./assets/src/meu_logo.png" height="60px"></a>
+        <a href="./index.html"><img src="./assets/src/home.png" height="30px"></a>
+    </div>
+    </header>
+    <div class="container" id="startScreen">
+            <h1>Forca</h1>
+            <label for="wordInput">Digite a palavra:</label>
+            <input type="text" id="wordInput" placeholder="Insira a palavra">
+            <label for="hintInput">Dica:</label>
+            <input type="text" id="hintInput" placeholder="Insira a dica">
+            <button onclick="startGame()">Iniciar Jogo</button>
+          </div>
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+          <h2 id="popupMessage"></h2>
+          <button onclick="closePopup()">OK</button>
+        </div>
+      </div>
+      <div class="container" id="gameScreen" style="display: none;">
+        <div id="hintDisplay"></div>
+        <div id="wordDisplay"></div>
+        <div id="letterButtons"></div>
+        <br><br><br><p>Tentativas restantes: <span id="remainingAttempts">5</span></p>
+        <p id="result"></p>
+      </div>
+
+    <script src="./assets/js/forca.js"></script>
+</body>
+</html>

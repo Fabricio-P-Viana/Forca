@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;1,9..40,100;1,9..40,200&display=swap');
+
+:root {
+    --cor-principal: #1fbee1;
+    --cor-background-principal: #0c0c0c;
+    --cor-tom-branco-2: #cbcbcb;
+    --cor-tom-branco-1: #fafafa;
+    --cor-branco: #fff;
+    --font-titulo: Permanent Marker;
+    --font-paragrafos: DM sans;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

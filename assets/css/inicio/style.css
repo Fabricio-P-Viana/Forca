@@ -1,0 +1,94 @@
+body {
+    background-color: var(--cor-background-principal);
+    overflow-y: hidden;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+div, section, footer{
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    border: none;
+}
+
+h1 {
+    color: var(--cor-branco);
+    font-family: var(--font-titulo);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 200px;
+}
+
+p {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-family: var(-font-paragrafos);
+    color: var(--cor-branco);
+    font-weight: Thin 100;
+}
+
+.minhaLogo{
+    margin: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo {
+    margin-right: 100px;
+}
+
+.centro-inicio{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    & button {
+        background-color: var(--cor-principal);
+        height: 100px;
+        width: 100px;
+        margin-left: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    & img {
+        width: 50px; 
+        height: 50px;
+        align-self: center;
+    }
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: 40px 80px;
+    justify-content: space-between;
+    & .links{
+        display: flex;
+        justify-self: end;
+        & img{
+            height: 50px;
+        }
+    }
+}
+
+
