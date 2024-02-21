@@ -1,6 +1,6 @@
 body {
     background-color: var(--cor-background-principal);
-    overflow-y: hidden;
+/*     overflow-y: hidden; */
 }
 
 video {
