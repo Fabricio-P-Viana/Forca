@@ -43,6 +43,7 @@ function displayLetterButtons() {
 
   for (let letter = 'A'.charCodeAt(0); letter <= 'Z'.charCodeAt(0); letter++) {
     const button = document.createElement('button');
+    button.id = `button${String.fromCharCode(letter)}`;
     button.classList.add('butonLetter');
     button.innerText = String.fromCharCode(letter);
     button.onclick = () => checkLetter(String.fromCharCode(letter));
@@ -51,6 +52,8 @@ function displayLetterButtons() {
 }
 
 function checkLetter(letter) {
+  const button = document.getElementById(`button${letter}`);
+  
   if (aPalavra.includes(letter)) {
     for (let i = 0; i < aPalavra.length; i++) {
       if (aPalavra[i] === letter) {
@@ -58,9 +61,11 @@ function checkLetter(letter) {
       }
     }
     updateWordDisplay();
+    disableLetterButton(button, true); // Desativa o botão e define a cor como verde
   } else {
     contadorErros++;
     document.getElementById('remainingAttempts').innerText = 5 - contadorErros;
+    disableLetterButton(button, false); // Desativa o botão e define a cor como vermelha
   }
 
   if (contadorErros === 5) {
@@ -68,6 +73,11 @@ function checkLetter(letter) {
   } else if (!separaPalavra.includes('_')) {
     endGame(true);
   }
+}
+
+function disableLetterButton(button, isCorrect) {
+  button.disabled = true;
+  button.style.backgroundColor = isCorrect ? 'green' : 'red';
 }
 
 function endGame(isWinner) {
